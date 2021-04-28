@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -194,6 +194,78 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.hszblog.com/2021/04/28/golang-gin-mode%E7%94%A8%E6%B3%95%E8%A7%A3%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="heshengzai">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hszblog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/28/golang-gin-mode%E7%94%A8%E6%B3%95%E8%A7%A3%E6%9E%90/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-28 10:27:12 / Modified: 10:32:06" itemprop="dateCreated datePublished" datetime="2021-04-28T10:27:12+08:00">2021-04-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在使用gin的项目中，有这样一句代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gin.SetMode(gin.ReleaseMode)</span><br><span class="line">&#x2F;&#x2F; 或者也可以写成</span><br><span class="line">gin.SetMode(&quot;release&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>gin提供了三种模式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const (</span><br><span class="line">	&#x2F;&#x2F; DebugMode indicates gin mode is debug.</span><br><span class="line">	DebugMode &#x3D; &quot;debug&quot;</span><br><span class="line">	&#x2F;&#x2F; ReleaseMode indicates gin mode is release.</span><br><span class="line">	ReleaseMode &#x3D; &quot;release&quot;</span><br><span class="line">	&#x2F;&#x2F; TestMode indicates gin mode is test.</span><br><span class="line">	TestMode &#x3D; &quot;test&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>三种模式很好理解，在本地开发的时候可以使用debug模式，将所有的警告、报错都打印出来，方便调试<br>在测试环境的时候可以设置成test模式<br>而项目正式上线后，最后是设置成release模式</p>
+<p>如果在启动gin服务器时如果不设置mode模式，命令行会给出一段提示:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[WARNING] Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.</span><br><span class="line"> - using env:   export GIN_MODE&#x3D;release</span><br><span class="line"> - using code:  gin.SetMode(gin.ReleaseMode)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
